@@ -266,7 +266,7 @@ body.active2{
     position: absolute;
     top: 50%;
     left: 50%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -296,15 +296,15 @@ body.active2{
         flex-direction: column;
     }
     .left{
-        width: 90%;
+        width: 99%;
         backdrop-filter: none; 
         min-height: 50vh;
-        margin-top: -10rem;
+        margin-top: -5rem;
 
     }
     
     .right{
-        width: 90%;
+        width: 100%;
     
     }
     .quote{
@@ -325,14 +325,14 @@ body.active2{
 }
 @media only screen and (max-width: 768px) {
     .theme ul li {
-        padding: 0 0.4rem;
+        padding:  0.2rem 0;
     }
-    .mobile-menu{
+    /* .mobile-menu{
         display: flex;
     }
     .mobile-menu ul{
         display: flex;
-    }
+    } */
     .quote{
         z-index: 0!important;
     }
@@ -386,5 +386,12 @@ body.active2{
         
         margin-top: -5rem;
 
+    }
+    .theme ul li .content img{
+        width: 100%;
+        max-width: 100%;
+        display:block;
+        height: 60px;
+        border-radius: 0.4rem;
     }
 }

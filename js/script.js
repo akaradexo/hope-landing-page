@@ -11,7 +11,7 @@
 		one.addEventListener('click',function(){
 			var body=document.querySelector('body');
       var sayingHead = document.getElementById('sayingHead').innerHTML="Never lose your faith.";
-      var sayingQuote =document.getElementById('sayingQuote').innerHTML="its's often in the darkest moments where you find clarity,hope and motivation to overcome.";
+      var sayingQuote =document.getElementById('sayingQuote').innerHTML="its's often in the darkest moments where you find motivation to overcome.";
 			body.classList.remove('active1');
 			body.classList.remove('active2');
 
