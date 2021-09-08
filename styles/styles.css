@@ -39,19 +39,13 @@ a:active, a:focus {
    
 
 nav{
-    padding: 2rem;
-    z-index: 111;
-    position: fixed;
-    top:0;
-    left: 0;
-    right:0
+    margin: 2rem;
 }
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    z-index: 1;
 }
 .nav-brand{
     text-align: center;
@@ -71,6 +65,13 @@ nav{
     cursor: pointer;
     text-transform: uppercase
 }
+.nav-links ul li:hover{
+    font-weight: 900;
+}
+
+
+
+
 .container{
     display: flex;
     flex-direction: column;
@@ -90,7 +91,7 @@ nav{
 }
 .left{
     width: 50%;
-    height: 52rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,7 +106,6 @@ nav{
     align-content: center;
     margin: 0 2rem;
     margin-left: 10rem ;
-    z-index: 1111!important;
 }
 .quote h1{
     font-size: 1rem;
@@ -128,12 +128,21 @@ nav{
 
 .social-links{
     display: flex;
+    margin: 4rem 0rem 0 5rem ;
+    justify-content: center;
+    align-items: center;
     justify-content: space-between;
-    position: fixed;
-    bottom: 10%;
-    left: 5%;
-    width: 20%;
+    width: 30%;
 }
+.social-links a{
+    color: var(--clr-white);
+   
+}
+.social-links a:hover{
+    color: var(--clr-light-blueish);
+   
+}
+
 .right{
     display: flex;
     justify-content: center;
@@ -142,15 +151,17 @@ nav{
 
 }
 .theme{
-    position: fixed;
-    bottom: 10%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items:center;
+    margin-bottom: -20rem;
+    width: 100%;
 }
 .theme ul{
     display: flex;
-    justify-content: center;
+    flex-direction: row ;
+    justify-content: space-around;
     align-items: center;
     list-style: none;
     color: var(--clr-white);
@@ -158,16 +169,40 @@ nav{
 .theme ul li {
     padding: 0 2rem;
 }
-.theme ul li a {
+.theme ul li .content {
     color: var(--clr-white);
+    cursor: pointer;
+    -webkit-transform: scale(1);
+	  transform: scale(1);
+	  -webkit-transition: .3s ease-in-out;
+	  transition: .3s ease-in-out;
 }
-.theme ul li a img{
+.theme ul li .content:hover{
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+
+body.active1{
+    background-image: url(../assests/images/marc-olivier-jodoin-TStNU7H4UEE-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.active2{
+    background-image: url(../assests/images/youssef-naddam-iJ2IG8ckCpA-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.theme ul li .content img{
+    width: 100%;
+    max-width: 100%;
+    display:block;
     height: 80px;
-    width: 160px;
     border-radius: 0.4rem;
 }
-.theme ul li a p{
-    margin-top: -1.5rem;
+.theme ul li .content p{
     text-align: center;
 }
 
@@ -211,4 +246,145 @@ nav{
 
 .button-55:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+/* Mobile menu */
+.toggle-menu{
+    display: none;
+}
+.mobile-menu{
+    z-index: 1999;
+    display: none;
+    width: 100%;
+    min-height: 100vh!important;
+    backdrop-filter: blur(10px); 
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.445);
+}
+.mobile-menu ul{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    color: var(--clr-dark);
+    z-index: 1111;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+}
+.mobile-menu ul h1{
+    font-size: 5rem;
+}
+.mobile-menu ul li{
+    font-size: 2.5rem;
+}
+.mobile-menu ul a{
+    font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 1218px) {
+    .theme ul li {
+        padding: 0 0.4rem;
+    }
+}
+@media only screen and (max-width: 1018px) {
+    .header{
+        flex-direction: column;
+    }
+    .left{
+        width: 90%;
+        backdrop-filter: none; 
+        min-height: 50vh;
+        margin-top: -10rem;
+
+    }
+    
+    .right{
+        width: 90%;
+    
+    }
+    .quote{
+        margin-left: 0rem ;
+    }
+    
+    .theme{
+    margin-bottom: 0rem;
+    margin: 4rem;
+    }
+    body.active2{
+        background-image: url(../assests/images/vertical-love.jpg);
+    }
+    .social-links{
+        margin: 1rem auto;
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .theme ul li {
+        padding: 0 0.4rem;
+    }
+    .mobile-menu{
+        display: flex;
+    }
+    .mobile-menu ul{
+        display: flex;
+    }
+    .quote{
+        z-index: 0!important;
+    }
+    .toggle-menu{
+        display: flex;
+    }
+    
+    
+    .navbar{
+    padding: 0rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .nav-links{
+        display: none;
+    }
+    .bar{
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px){
+    .mobile-menu{
+        display: none!important;
+    }
+    .mobile-menu ul{
+        display: none!important;
+    }
+    .toggle-menu{
+        display: none!important;
+    }
+}
+@media only screen and (max-width: 568px){
+    .theme{
+        margin: 1rem;
+        margin-top: -2rem;
+        }
+    .theme ul{
+        flex-direction: column;
+    }
+    .saying h1{
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+    .saying p{
+        font-size: 1.5rem;
+    margin: 1rem 0;
+
+    }
+    .left{
+        
+        margin-top: -5rem;
+
+    }
 }

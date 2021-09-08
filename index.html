@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Faith◘Hope◘Love</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assests/images/circle-logo.png">
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,9 +14,9 @@
       <!-- Navbar -->
       <nav>
         <div class="navbar">
-          <div class="nav-brand">
-            <h1>/be.</h1>
-          </div>
+          <div class="nav-brand"><h1>/be.</h1></div>
+         
+          
           <div class="nav-links">
             <ul>
               <li>motivation</li>
@@ -25,19 +26,31 @@
               <li>begin</li>
             </ul>
           </div>
+          <div onclick="toggleMenu()" class="toggle-menu"> <i class="fas fa-bars"></i> </div>
           <div class="bar">
             <a  href="https://protfolio-ashutosh.netlify.app/" target ="_blank"><i class="fas fa-qrcode"></i></a>
           </div>
         </div>
       </nav>
+      <div class="mobile-menu" id="myDIV">
+        <ul>
+     
+          <li>motivation</li>
+          <li>journey</li>
+          <li>progress</li>
+          <li>belief</li>
+          <li>begin</li>
+          <a  href="https://protfolio-ashutosh.netlify.app/" target ="_blank"><i class="fas fa-qrcode"></i></a>
+        </ul>
+      </div>
       <div class="container">
       <div class="header">
         <div class="left">
           <div class="quote">
             <h1><i class="fas fa-grip-lines"></i></h1>
             <div class="saying">
-              <h1>Never lose your faith.</h1>
-              <p>its's often in the darkest moments where you find clarity,hope and motivation to overcome.</p>
+              <h1 id="sayingHead">Never lose your faith.</h1>
+              <p id="sayingQuote">its's often in the darkest moments where you find clarity,hope and motivation to overcome.</p>
               <a href="https://protfolio-ashutosh.netlify.app/" target ="_blank" class="button-55" role="button">The Journey ➡</a>
             </div>
           </div>
@@ -45,31 +58,28 @@
             <a href="https://www.instagram.com/web.uistylist/?hl=en" target="_blank"> <i class="fab fa-instagram"></i></a>
             <a href="https://www.instagram.com/web.uistylist/?hl=en" target="_blank"><i class="fab fa-twitter-square"></i></a>
             <a href="https://www.instagram.com/web.uistylist/?hl=en" target="_blank"> <i class="fab fa-facebook-square"></i></a>
-           
-            
-           
           </div>
         </div>
         <div class="right">
           <div class="theme">
             <ul>
               <li>
-                <a href=""> 
+                <div class="content" id="one"> 
                   <img src="./assests/images/stormseeker-rX12B5uX7QM-unsplash.jpg" alt="">
                   <p>01.Faith</p>
-                </a>
+                </div>
               </li>
               <li>
-                <a href=""> 
+                <div class="content" id="two"> 
                   <img src="./assests/images/marc-olivier-jodoin-TStNU7H4UEE-unsplash.jpg" alt="">
                   <p>02.Hope</p>
-                </a>
+                </div>
               </li>
-              <li>
-                <a href=""> 
+              <li>  
+                <div class="content" id="three"> 
                   <img src="./assests/images/youssef-naddam-iJ2IG8ckCpA-unsplash.jpg" alt="">
                   <p>03.Love</p>
-                </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -77,4 +87,5 @@
       </div>
     </div>
 </body>
+<script src="./js/script.js"></script>
 </html>
