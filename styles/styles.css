@@ -389,7 +389,7 @@ body.active2{
     }
     .theme ul li .content img{
         width: 100%;
-        max-width: 100%;
+        max-width: 160px;
         display:block;
         height: 60px;
         border-radius: 0.4rem;
